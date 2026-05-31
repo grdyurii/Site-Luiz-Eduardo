@@ -1,0 +1,686 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(19, 19, 19, 0.465);
+    padding: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: auto;
+    backdrop-filter: blur(5px);
+    border-bottom: 0.2px solid rgba(255, 255, 255, 0.082);
+    z-index: 1;
+}
+
+header h1{
+    color: white;
+    font-family:'Anton', sans-serif;
+    font-size: 30px;
+}
+
+header .ph{
+    font-size: 20px;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #ff0303;
+    box-shadow: 0 0 8px #ff0303;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .35s ease;
+}
+
+nav a:hover::after{
+    transform: scaleX(1);
+}
+
+header button{
+    background: transparent;
+    color: #ff0303f9;
+    padding: 12px 18px;
+    font-size: 12px;
+    border: 2px solid #ff0303f9;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: color .35s ease;
+
+    box-shadow: 0 0 4px #ff0303;
+}
+
+header button::before{
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 100%;
+
+    background: #ff0303f9;
+
+    transition: width .35s ease;
+    z-index: -1;
+}
+
+header button:hover{
+    color: white;
+}
+
+header button:hover::before{
+    width: 100%;
+}
+
+
+
+#inicio{
+    background:
+    linear-gradient(
+        to right,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.45)
+    ),
+    url(homem.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+}
+
+#inicio span, .servicos-intro span, .sobre-info span, .card-container span, .transformacoes-intro span, .planos-intro span{
+    color: #ff0303f9;
+    text-shadow: 0 0 2px #ff0303;
+}
+
+#inicio p{
+    color: white;
+    font-size: 17px;
+}
+
+#inicio h2, #transformacoes h1, #planos h1{
+    color: white;
+    font-size: 55px;
+    font-family:'Anton', sans-serif;
+    
+}
+
+#inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#inicio div{
+    margin-left: 30px;
+}
+
+
+#inicio button{
+    background-color: #ff0303f9;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+}
+
+#inicio button .ph{
+    color: black;
+    font-size: 26px;
+}
+
+#servicos, #transformacoes{
+    display: flex;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    flex-direction: column;
+    padding: 45px 70px;
+    gap: 20px;
+}
+
+.servicos-intro, .transformacoes-intro, .planos-intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.servicos-descricao{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+
+}
+
+.servicos-descricao span{
+    font-size: 14px;
+}
+
+.servicos-descricao div{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    gap: 3px;
+    background-color: rgb(35, 35, 35);
+    padding: 20px;
+    border-radius: 8px;
+    transition: all ease-in-out 0.5s;
+}
+
+.servicos-descricao div:hover{
+    transform: scale(1.08);
+}
+
+#servicos p, #transformacoes p, #planos p{
+    color: rgba(240, 248, 255, 0.617);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    
+}
+
+#servicos .ph{
+    color: #ff0303f9;
+    font-size: 50px;
+}
+
+#Sobre{
+    display: flex;
+    background-color: rgb(9, 9, 9);
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.sobre-info{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    color: white;
+    width: 100%;
+
+}
+
+.sobre-info p{
+    color: rgba(240, 248, 255, 0.617);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    padding: 20px 0px;
+    
+}
+
+.sobre-info h1{
+    font-size: 45px;
+    font-family:'Anton', sans-serif;
+}
+
+
+.metodologia{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(31, 31, 31);
+    border-bottom: 1px solid rgb(31, 31, 31);
+}
+
+.metodologia p{
+    font-size: 12px;
+    padding: 0;
+}
+
+.metodologia div{
+    width: 100%;
+    padding: 20px;
+}
+
+.metodologia span, .servicos-intro h2{
+    font-size: 45px;
+    font-family:'Oswald', sans-serif;
+}
+
+br{
+    gap: 20px;
+}
+
+.card-container{
+    flex:1;
+    min-width:280px;
+    background-color: rgb(11, 11, 11);
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+}
+
+.antes{
+    font-size: 10px;
+    position:absolute;
+    left: 5px;
+    top: 5px;
+    background-color: rgba(0, 0, 0, 0.859);
+    border: 0.3px solid rgba(255, 255, 255, 0.398);
+    border-radius: 20px;
+    font-weight: 500;
+    padding: 5px 7px;
+    width: 70px;
+    text-align: center;
+    letter-spacing: 2px;
+    
+}
+
+.depois{
+   font-size: 10px;
+    position:absolute;
+    right: 5px;
+    top: 5px;
+    background-color:#ff0303f9;
+    border: 0.3px solid rgba(255, 255, 255, 0.398);
+    border-radius: 20px;
+    font-weight: 500;
+    padding: 5px 7px;
+    width: 70px;
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.card-container img{
+    width: 100%;
+    height: 200px;
+}
+
+.transformacoes-cards, .planos-card{
+    display: flex;
+    gap: 50px;
+    align-items: stretch;
+}
+
+
+.transformacoes-intro div, .planos-intro div{
+    width: 50%;
+    
+}
+
+.resultados, .planos-descricao{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 30px;
+    padding: 0px 20px;
+}
+
+.resultados p{
+    font-size: 14px;
+    
+}
+
+.resultados div, .planos-descricao div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+.resultados h2, .planos-descricao h2{
+    font-size: 30px;
+    font-family:'Anton', sans-serif;
+    font-weight: 100;
+}
+
+.resultados h3{
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.528);
+}
+
+.resultados span{
+    font-size: 10px;
+}
+
+.resultados-obtidos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    gap: 30px;
+    border-top: 0.3px solid rgba(255, 255, 255, 0.126); 
+    border-bottom: 0.3px solid rgba(255, 255, 255, 0.126); 
+}
+
+.resultados-obtidos span{
+    font-size: 25px;
+}
+
+.resultados-obtidos p{
+    font-size: 10px;
+}
+
+#planos{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(9, 9, 9);
+    align-items: center;
+    color: white;
+    padding: 45px 70px;
+    gap: 20px;
+}
+
+.planos-descricao button{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding: 10px;
+    background-color:  rgba(100, 100, 100, 0.167);
+    border: none;
+    border-radius: 30px;
+    width: 70%;
+    font-weight: 500;
+    text-align: center;
+    transition: all ease-in-out 0.4s;
+    cursor: pointer;
+}
+
+.planos-descricao button:hover{
+    background-color: rgba(240, 248, 255, 0.485);
+    transform: translateY(-4px);
+    color: black;
+    font-weight: bold;
+}
+
+.planos-descricao button:hover .ph{
+    
+    color: black;
+    font-weight: bold;
+}
+
+.planos-descricao .ph{
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px;
+    transition: all ease-in-out 0.4s;
+}
+
+.plano{
+    border: 0.2px solid rgba(255, 255, 255, 0.192);
+    transition: all ease-in-out 0.5s;
+}
+
+.plano:hover{
+    border: 0.2px solid rgba(255, 0, 0, 0.547); 
+    background-color: rgba(255, 0, 0, 0.097);
+    transform: scale(1.05);
+}
+
+.presencial{
+    font-size: 10px;
+    position:absolute;
+    left: 7px;
+    bottom: 7px;
+    background-color: rgba(255, 2, 2, 0.678);
+    border: 0.3px solid rgba(255, 255, 255, 0.398);
+    border-radius: 20px;
+    font-weight: 500;
+    padding: 5px 7px;
+    width: auto;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.imagem-plano{
+    position: relative;
+}
+
+.planos-descricao p{
+    font-size: 14px;
+}
+
+.planos-descricao li{
+    font-weight: 600;
+    font-size: 12px;
+    list-style: none;
+    
+}
+
+.botoes-planos{
+    display: flex;
+    align-items: center;
+}
+
+.botoes-planos .ph-arrow-up-right{
+    color: white;
+}
+
+#faq{
+    background-color: rgb(18,18,18);
+    color: white;
+    padding: 45px 70px;
+}
+
+.faq-intro{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-intro span{
+    color: #ff0303f9;
+}
+
+.faq-intro h1{
+    font-size: 55px;
+    font-family: 'Anton', sans-serif;
+}
+
+.faq-container{
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-container details{
+    background-color: rgb(25,25,25);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.faq-container details:hover{
+    border-color: rgba(255,0,0,0.4);
+}
+
+.faq-container summary{
+    padding: 20px;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+    position: relative;
+}
+
+.faq-container summary::-webkit-details-marker{
+    display: none;
+}
+
+.faq-container summary::after{
+    content: "+";
+    position: absolute;
+    right: 20px;
+    color: #ff0303f9;
+    font-size: 22px;
+    transition: .3s;
+}
+
+.faq-container details[open] summary::after{
+    transform: rotate(45deg);
+}
+
+.faq-container p{
+    padding: 0 20px 20px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px){
+    header{
+    flex-direction: column;
+    gap:15px;
+    padding:15px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+header button{
+    width:100%;
+    justify-content:center;
+}
+
+#inicio h2{
+    font-size:40px;
+}
+
+#inicio div{
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.servicos-intro{
+    flex-direction:column;
+    gap:20px;
+}
+
+.servicos-intro div{
+    width:100%;
+}
+
+.servicos-descricao{
+    flex-direction:column;
+}
+
+.servicos-descricao div{
+    width:100%;
+}
+
+#Sobre{
+    flex-direction: column;
+}
+
+#Sobre img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.metodologia{
+    flex-direction: column;
+}
+
+.transformacoes-intro{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.transformacoes-intro div{
+    width: 100%;
+}
+
+.transformacoes-cards{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.transformacoes-cards .card-container{
+    width: 100%;
+}
+
+.planos-intro{
+    flex-direction: column;
+}
+
+.planos-intro div{
+    width: 100%;
+}
+
+.planos-card{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.planos-card .card-container{
+    width: 100%;
+}
+
+#servicos, #transformacoes, #planos{
+    padding: 40px 20px;
+}
+
+.sobre-info{
+    padding: 30px 20px;
+}
+
+#faq{
+    padding: 40px 20px;
+}
+
+.faq-intro h1{
+    font-size: 36px;
+}
+
+.faq-container summary{
+    font-size: 14px;
+}
+}
