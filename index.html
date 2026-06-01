@@ -9,17 +9,44 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
+    <i class="ph ph-whatsapp-logo"></i>
     <!--cabeçalho do site-->
     <header>
-        <div>
-        <img src="LElogo.png" alt="" width="60px">
+
+    <a href="#inicio">
+        <img src="LElogo.png" alt="" width="60">
         <h1>LUIZ EDUARDO</h1>
-        </div>
+    </a>
+
+    <!-- Menu Desktop -->
+    <nav id="menu-desktop">
+        <a href="#inicio">INÍCIO</a>
+        <a href="#servicos">SERVIÇOS</a>
+        <a href="#Sobre">SOBRE</a>
+        <a href="#transformacoes">TRANSFORMAÇÕES</a>
+        <a href="#planos">PLANOS</a>
+    </nav>
+
+    <button id="agendar-desktop"
+        onclick="window.open('https://wa.me/5541999078681?text=Ol%C3%A1%20Luiz!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20voc%C3%AA.')">
+        AGENDAR AVALIAÇÃO
+        <i class="ph ph-arrow-up-right"></i>
+    </button>
+
+    <!-- Botão Hambúrguer -->
+    <button id="menu-btn">
+        <i class="ph ph-list"></i>
+    </button>
+
+    <!-- Menu Mobile -->
+    <div id="menu-mobile">
+
         <nav>
             <a href="#inicio">INÍCIO</a>
             <a href="#servicos">SERVIÇOS</a>
@@ -27,8 +54,16 @@
             <a href="#transformacoes">TRANSFORMAÇÕES</a>
             <a href="#planos">PLANOS</a>
         </nav>
-        <button onclick="window.open('https://api.whatsapp.com/send/?phone=5541999078681&text=Ol%C3%A1+Luiz%21+Vim+pelo+site+e+quero+saber+como+funciona+o+acompanhamento.&type=phone_number&app_absent=0')">AGENDAR AVALIAÇÃO <i class="ph ph-arrow-up-right"></i></button>
-    </header>
+
+        <button id="agendar-mobile"
+            onclick="window.open('https://wa.me/5541999078681?text=Ol%C3%A1%20Luiz!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20voc%C3%AA.')">
+            AGENDAR AVALIAÇÃO
+            <i class="ph ph-arrow-up-right"></i>
+        </button>
+
+    </div>
+
+</header>
     <section id="inicio">
 
 
@@ -45,7 +80,7 @@
                 profissional e o foco que você precisa<br>
                 para transformar seu corpo e sua mente.
             </p><br>
-            <button>QUERO RESULTADOS <i class="ph ph-arrow-right"></i></button>
+            <button id="BtnInicio">QUERO RESULTADOS <i class="ph ph-arrow-right"></i></button>
         </div>
     </section>
 
@@ -87,7 +122,7 @@
                 <span><strong>EXECUÇÃO GUIADA</strong></span><br>
                 <p>Presencial em Curitiba com correção em tempo real (individual ou em duplas). <br>
                     Online via plataforma com vídeo de cada exercício e <br>
-                    suporte direto comigo no Whatasapp.<br>
+                    suporte direto comigo no Whatsapp.<br>
                     <br>
                 </p>
             </div>
@@ -156,16 +191,54 @@
             </div>
         </section>
         <section class="transformacoes-cards">
-
             <section class="card-container">
-                <img src="moca.jpeg" alt=""><br>
-                <h4 class="antes">ANTES</h4>
-                <h4 class="depois">DEPOIS</h4>
+                <div class="carrossel">
+                    <img id="pessoaEsquerda" src="MoniqueFrente.png" alt=""><br>
+                    <h4 class="antes">ANTES</h4>
+                    <h4 class="depois">DEPOIS</h4>
+                    <button id="ProximoSlide" class="ProximoSlide"><i class="ph ph-caret-circle-right"></i></button>
+                    <button id="SlideAnterior" class="SlideAnterior"><i class="ph ph-caret-circle-left"></i></button>
+                </div>
                 <section class="resultados">
                     <div>
                         <span>16 SEMANAS</span>
-                        <h2>MONIQUE ALMEIDA</h2>
+                        <h2>MONIQUE</h2>
                         <h3>Presencial · 16 semanas</h3>
+                    </div>
+                    <section class="resultados-obtidos">
+                        <div>
+                            <span><strong>-2Kg</strong></span>
+                            <p>PESO</p>
+                        </div>
+                        <div>
+                            <span><strong>+1Kg</strong></span>
+                            <p>MASSA MAGRA</p>
+                        </div>
+                        <div>
+                            <span><strong>-4%</strong></span>
+                            <p>GORDURA</p>
+                    </section>
+                    </div>
+                    <div>
+                        <p>“Amei a consultoria, personal super legal e muito atencioso. Foi um resultado muito exclente
+                            em apenas 1 mês!!”</p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="card-container">
+                <div class="carrossel">
+                    <img id="pessoaMeio" src="ElaineFrente.png" alt="">
+                    <h4 class="antes">ANTES</h4>
+                    <h4 class="depois">DEPOIS</h4>
+                    <button id="ProximoSlide2" class="ProximoSlide"><i class="ph ph-caret-circle-right"></i></button>
+                    <button id="SlideAnterior2" class="SlideAnterior"><i class="ph ph-caret-circle-left"></i></button>
+                </div>
+                <section class="resultados">
+                    <div>
+                        <span>12 SEMANAS</span>
+                        <h2>ELAINE</h2>
+                        <h3>Consultoria · 12 semanas</h3>
                     </div>
                     <section class="resultados-obtidos">
                         <div>
@@ -189,47 +262,21 @@
             </section>
 
 
-            <section class="card-container">
-                <img src="moca2.png" alt=""><br>
-                <h4 class="antes">ANTES</h4>
-                <h4 class="depois">DEPOIS</h4>
-                <section class="resultados">
-                    <div>
-                        <span>5 SEMANAS</span>
-                        <h2>PRISCILA SANTOS</h2>
-                        <h3>Consultoria · 5 semanas</h3>
-                    </div>
-                    <section class="resultados-obtidos">
-                        <div>
-                            <span><strong>-2Kg</strong></span>
-                            <p>PESO</p>
-                        </div>
-                        <div>
-                            <span><strong>+1Kg</strong></span>
-                            <p>MASSA MAGRA</p>
-                        </div>
-                        <div>
-                            <span><strong>-4%</strong></span>
-                            <p>GORDURA</p>
-                    </section>
-                    </div>
-                    <div>
-                        <p>“Amei a consultoria, personal super legal e muito atencioso. Foi um resultado muito exclente
-                            em apenas 1 mês!!”</p>
-                    </div>
-                </section>
-            </section>
 
 
             <section class="card-container">
-                <img src="moca3.png" alt=""><br>
-                <h4 class="antes">ANTES</h4>
-                <h4 class="depois">DEPOIS</h4>
+                <div class="carrossel">
+                    <img id="pessoaDireita" src="IsabelaFrente.jpeg" alt="">
+                    <h4 class="antes">ANTES</h4>
+                    <h4 class="depois">DEPOIS</h4>
+                    <button id="ProximoSlide3" class="ProximoSlide"><i class="ph ph-caret-circle-right"></i></button>
+                    <button id="SlideAnterior3" class="SlideAnterior"><i class="ph ph-caret-circle-left"></i></button>
+                </div>
                 <section class="resultados">
                     <div>
-                        <span>16 SEMANAS</span>
-                        <h2>BRUNA WOSNIAK</h2>
-                        <h3>Online · 16 semanas</h3>
+                        <span>7 SEMANAS</span>
+                        <h2>ISABELA</h2>
+                        <h3>Presencial · 7 semanas</h3>
                     </div>
                     <section class="resultados-obtidos">
                         <div>
@@ -272,117 +319,120 @@
         <section class="planos-card">
             <section class="card-container plano">
                 <div class="imagem-plano">
-                <img src="personal.webp" alt="">
-                <h4 class="presencial">PRESENCIAL</h4>
+                    <img src="personal.webp" alt="">
+                    <h4 class="presencial">PRESENCIAL</h4>
                 </div>
                 <section class="planos-descricao">
                     <div>
-                    <h2>PERSONAL INDIVIDUAL</h2>
-                    <p>Pra quem mora em Curitiba e quer acompanhamento 100% presencial — em condomínio, home gym ou academia. Treino guiado comigo, com correção em tempo real.</p>
+                        <h2>PERSONAL INDIVIDUAL</h2>
+                        <p>Pra quem mora em Curitiba e quer acompanhamento 100% presencial — em condomínio, home gym ou
+                            academia. Treino guiado comigo, com correção em tempo real.</p>
                     </div>
                     <div>
-                    <ul>
-                        <li><i class="ph ph-check"></i>Aulas individuais (1:1) comigo</li>
-                        <li><i class="ph ph-check"></i>Atendimento em condomínio, homegym ou academia</li>
-                        <li><i class="ph ph-check"></i>Plano focado no seu objetivo</li>
-                        <li><i class="ph ph-check"></i>Frequeência ajustada à sua rotina</li>
-                    </ul>
+                        <ul>
+                            <li><i class="ph ph-check"></i>Aulas individuais (1:1) comigo</li>
+                            <li><i class="ph ph-check"></i>Atendimento em condomínio, homegym ou academia</li>
+                            <li><i class="ph ph-check"></i>Plano focado no seu objetivo</li>
+                            <li><i class="ph ph-check"></i>Frequeência ajustada à sua rotina</li>
+                        </ul>
                     </div>
                     <div class="botoes-planos">
-                    <button>Quero treinar com você<i class="ph ph-arrow-up-right"></i></button>
+                        <button>Quero treinar com você<i class="ph ph-arrow-up-right"></i></button>
                     </div>
-                </section>        
+                </section>
             </section>
 
 
 
             <section class="card-container plano">
                 <div class="imagem-plano">
-                <img src="consultoria.webp" alt="">
-                <h4 class="presencial">ONLINE</h4>
+                    <img src="consultoria.webp" alt="">
+                    <h4 class="presencial">ONLINE</h4>
                 </div>
                 <section class="planos-descricao">
                     <div>
-                    <h2>CONSULTORIA ONLINE</h2>
-                    <p>Treino personalizado, criação de rotina e acompanhamento periódico de resultados — pra você treinar de qualquer lugar com uma estratégia profissional por trás</p>
+                        <h2>CONSULTORIA ONLINE</h2>
+                        <p>Treino personalizado, criação de rotina e acompanhamento periódico de resultados — pra você
+                            treinar de qualquer lugar com uma estratégia profissional por trás</p>
                     </div>
                     <div>
-                    <ul>
-                        <li><i class="ph ph-check"></i>Aulas individuais (1:1) comigo</li>
-                        <li><i class="ph ph-check"></i>Atendimento em condomínio, homegym ou academia</li>
-                        <li><i class="ph ph-check"></i>Plano focado no seu objetivo</li>
-                        <li><i class="ph ph-check"></i>Frequeência ajustada à sua rotina</li>
-                    </ul>
+                        <ul>
+                            <li><i class="ph ph-check"></i>Aulas individuais (1:1) comigo</li>
+                            <li><i class="ph ph-check"></i>Atendimento em condomínio, homegym ou academia</li>
+                            <li><i class="ph ph-check"></i>Plano focado no seu objetivo</li>
+                            <li><i class="ph ph-check"></i>Frequeência ajustada à sua rotina</li>
+                        </ul>
                     </div>
                     <div class="botoes-planos">
-                    <button>Quero a consultoria<i class="ph ph-arrow-up-right"></i></button>
+                        <button>Quero a consultoria<i class="ph ph-arrow-up-right"></i></button>
                     </div>
-                </section>        
+                </section>
             </section>
 
 
 
             <section class="card-container plano">
                 <div class="imagem-plano">
-                <img src="dupla.webp" alt="">
-                <h4 class="presencial">EM DUPLA</h4>
+                    <img src="dupla.webp" alt="">
+                    <h4 class="presencial">EM DUPLA</h4>
                 </div>
                 <section class="planos-descricao">
                     <div>
-                    <h2>AULA EM DUPLA</h2>
-                    <p>Treine presencial em Curitiba acompanhado de quem você quiser — esposa, marido, amigo, irmão. Acompanhamento próximo dividindo o investimento.</p>
+                        <h2>AULA EM DUPLA</h2>
+                        <p>Treine presencial em Curitiba acompanhado de quem você quiser — esposa, marido, amigo, irmão.
+                            Acompanhamento próximo dividindo o investimento.</p>
                     </div>
                     <div>
-                    <ul>
-                        <li><i class="ph ph-check"></i>Aulas individuais (1:1) comigo</li>
-                        <li><i class="ph ph-check"></i>Atendimento em condomínio, homegym ou academia</li>
-                        <li><i class="ph ph-check"></i>Plano focado no seu objetivo</li>
-                        <li><i class="ph ph-check"></i>Frequeência ajustada à sua rotina</li>
-                    </ul>
+                        <ul>
+                            <li><i class="ph ph-check"></i>Aulas individuais (1:1) comigo</li>
+                            <li><i class="ph ph-check"></i>Atendimento em condomínio, homegym ou academia</li>
+                            <li><i class="ph ph-check"></i>Plano focado no seu objetivo</li>
+                            <li><i class="ph ph-check"></i>Frequeência ajustada à sua rotina</li>
+                        </ul>
                     </div>
                     <div class="botoes-planos">
-                    <button>Quero treinar em dupla<i class="ph ph-arrow-up-right"></i></button>
+                        <button>Quero treinar em dupla<i class="ph ph-arrow-up-right"></i></button>
                     </div>
-                </section>        
+                </section>
             </section>
         </section>
 
     </section>
     <section id="faq">
-    <div class="faq-intro">
-        <span>DÚVIDAS FREQUENTES</span>
-        <h1>PERGUNTAS QUE <span>RECEBO TODOS OS DIAS</span></h1>
-    </div>
+        <div class="faq-intro">
+            <span>DÚVIDAS FREQUENTES</span>
+            <h1>PERGUNTAS QUE <span>RECEBO TODOS OS DIAS</span></h1>
+        </div>
 
-    <div class="faq-container">
+        <div class="faq-container">
 
-        <details>
-            <summary>Preciso ter experiência para começar?</summary>
-            <p>Não. O treino é montado de acordo com seu nível atual, seja iniciante ou avançado.</p>
-        </details>
+            <details>
+                <summary>Preciso ter experiência para começar?</summary>
+                <p>Não. O treino é montado de acordo com seu nível atual, seja iniciante ou avançado.</p>
+            </details>
 
-        <details>
-            <summary>Você atende em quais locais?</summary>
-            <p>Atendo em condomínios, home gym e academias em Curitiba.</p>
-        </details>
+            <details>
+                <summary>Você atende em quais locais?</summary>
+                <p>Atendo em condomínios, home gym e academias em Curitiba.</p>
+            </details>
 
-        <details>
-            <summary>Como funciona a consultoria online?</summary>
-            <p>Você recebe um plano personalizado, acompanhamento periódico e suporte para evolução constante.</p>
-        </details>
+            <details>
+                <summary>Como funciona a consultoria online?</summary>
+                <p>Você recebe um plano personalizado, acompanhamento periódico e suporte para evolução constante.</p>
+            </details>
 
-        <details>
-            <summary>Os treinos servem para emagrecimento e hipertrofia?</summary>
-            <p>Sim. Todo o planejamento é adaptado ao seu objetivo específico.</p>
-        </details>
+            <details>
+                <summary>Os treinos servem para emagrecimento e hipertrofia?</summary>
+                <p>Sim. Todo o planejamento é adaptado ao seu objetivo específico.</p>
+            </details>
 
-        <details>
-            <summary>Qual a frequência ideal de treinos?</summary>
-            <p>Depende da sua rotina e objetivo. A frequência é definida individualmente.</p>
-        </details>
+            <details>
+                <summary>Qual a frequência ideal de treinos?</summary>
+                <p>Depende da sua rotina e objetivo. A frequência é definida individualmente.</p>
+            </details>
 
-    </div>
-</section>
+        </div>
+    </section>
 </body>
 
 </html>

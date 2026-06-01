@@ -1,15 +1,29 @@
-*{
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+.ph-whatsapp-logo{
+    position: fixed;
+    font-size: 50px;
+    color: #ff0303;
+    z-index: 2;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family:'Montserrat', sans-serif;
-
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -25,34 +39,41 @@ header{
     z-index: 1;
 }
 
-header h1{
+header a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+header h1 {
     color: white;
-    font-family:'Anton', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-size: 30px;
 }
 
-header .ph{
+header .ph {
     font-size: 20px;
 }
 
-header div{
+header div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-nav{
+nav {
     display: flex;
     gap: 20px;
 }
 
-nav a{
+nav a {
     color: white;
     text-decoration: none;
     position: relative;
 }
 
-nav a::after{
+nav a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -66,11 +87,13 @@ nav a::after{
     transition: transform .35s ease;
 }
 
-nav a:hover::after{
+nav a:hover::after {
     transform: scaleX(1);
 }
 
-header button{
+
+
+header button {
     background: transparent;
     color: #ff0303f9;
     padding: 12px 18px;
@@ -90,7 +113,7 @@ header button{
     box-shadow: 0 0 4px #ff0303;
 }
 
-header button::before{
+header button::before {
     content: "";
 
     position: absolute;
@@ -106,75 +129,101 @@ header button::before{
     z-index: -1;
 }
 
-header button:hover{
+header button:hover {
     color: white;
 }
 
-header button:hover::before{
+header button:hover::before {
     width: 100%;
 }
 
+#menu-btn {
+    display: none;
+}
 
+#menu-mobile {
+    display: none;
+}
 
-#inicio{
+#inicio {
     background:
-    linear-gradient(
-        to right,
-        rgba(0,0,0,0.85),
-        rgba(0,0,0,0.45)
-    ),
-    url(homem.png);
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.45)),
+        url(homem.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 110vh;
 }
 
-#inicio span, .servicos-intro span, .sobre-info span, .card-container span, .transformacoes-intro span, .planos-intro span{
+#inicio span,
+.servicos-intro span,
+.sobre-info span,
+.card-container span,
+.transformacoes-intro span,
+.planos-intro span {
     color: #ff0303f9;
     text-shadow: 0 0 2px #ff0303;
 }
 
-#inicio p{
+#inicio p {
     color: white;
     font-size: 17px;
 }
 
-#inicio h2, #transformacoes h1, #planos h1{
+#inicio h2,
+#transformacoes h1,
+#planos h1 {
     color: white;
     font-size: 55px;
-    font-family:'Anton', sans-serif;
-    
+    font-family: 'Anton', sans-serif;
+
 }
 
-#inicio{
+#inicio {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#inicio div{
+#inicio div {
     margin-left: 30px;
 }
 
 
-#inicio button{
+#inicio button {
     background-color: #ff0303f9;
-    border: none;
+    border: 1px solid #ff0303f9;
     padding: 10px;
     font-weight: bold;
     align-items: center;
     display: flex;
     gap: 20px;
     font-size: 16px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
 }
 
-#inicio button .ph{
+#inicio button .ph {
     color: black;
     font-size: 26px;
+     transition: all ease-in-out 0.3s;
 }
 
-#servicos, #transformacoes{
+#inicio button:hover {
+    background: none;
+    border: 1px solid #ff0303f9;
+    color:#ff0303;
+    transform: translateX(8px);
+}
+
+#inicio button:hover .ph {
+    color:#ff0303;
+}
+
+#servicos,
+#transformacoes {
     display: flex;
     background-color: rgb(26, 26, 26);
     color: white;
@@ -183,7 +232,9 @@ header button:hover::before{
     gap: 20px;
 }
 
-.servicos-intro, .transformacoes-intro, .planos-intro{
+.servicos-intro,
+.transformacoes-intro,
+.planos-intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -191,22 +242,22 @@ header button:hover::before{
 
 
 
-.servicos-descricao{
+.servicos-descricao {
     display: flex;
     justify-content: center;
     gap: 20px;
-    
+
 
 }
 
-.servicos-descricao span{
+.servicos-descricao span {
     font-size: 14px;
 }
 
-.servicos-descricao div{
+.servicos-descricao div {
     display: flex;
     flex-direction: column;
-    flex:1;
+    flex: 1;
     gap: 3px;
     background-color: rgb(35, 35, 35);
     padding: 20px;
@@ -214,30 +265,32 @@ header button:hover::before{
     transition: all ease-in-out 0.5s;
 }
 
-.servicos-descricao div:hover{
+.servicos-descricao div:hover {
     transform: scale(1.08);
 }
 
-#servicos p, #transformacoes p, #planos p{
+#servicos p,
+#transformacoes p,
+#planos p {
     color: rgba(240, 248, 255, 0.617);
     word-wrap: break-word;
     overflow-wrap: break-word;
-    
+
 }
 
-#servicos .ph{
+#servicos .ph {
     color: #ff0303f9;
     font-size: 50px;
 }
 
-#Sobre{
+#Sobre {
     display: flex;
     background-color: rgb(9, 9, 9);
     align-items: center;
     padding: 30px 0px;
 }
 
-.sobre-info{
+.sobre-info {
     display: flex;
     flex-direction: column;
     padding: 60px;
@@ -246,22 +299,22 @@ header button:hover::before{
 
 }
 
-.sobre-info p{
+.sobre-info p {
     color: rgba(240, 248, 255, 0.617);
     word-wrap: break-word;
     overflow-wrap: break-word;
     line-height: 1.5;
     padding: 20px 0px;
-    
+
 }
 
-.sobre-info h1{
+.sobre-info h1 {
     font-size: 45px;
-    font-family:'Anton', sans-serif;
+    font-family: 'Anton', sans-serif;
 }
 
 
-.metodologia{
+.metodologia {
     color: white;
     display: flex;
     justify-content: space-between;
@@ -269,37 +322,38 @@ header button:hover::before{
     border-bottom: 1px solid rgb(31, 31, 31);
 }
 
-.metodologia p{
+.metodologia p {
     font-size: 12px;
     padding: 0;
 }
 
-.metodologia div{
+.metodologia div {
     width: 100%;
     padding: 20px;
 }
 
-.metodologia span, .servicos-intro h2{
+.metodologia span,
+.servicos-intro h2 {
     font-size: 45px;
-    font-family:'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
-br{
+br {
     gap: 20px;
 }
 
-.card-container{
-    flex:1;
-    min-width:280px;
+.card-container {
+    flex: 1;
+    min-width: 280px;
     background-color: rgb(11, 11, 11);
     border-radius: 14px;
     overflow: hidden;
     position: relative;
 }
 
-.antes{
-    font-size: 10px;
-    position:absolute;
+.antes {
+    font-size: 8px;
+    position: absolute;
     left: 5px;
     top: 5px;
     background-color: rgba(0, 0, 0, 0.859);
@@ -307,21 +361,21 @@ br{
     border-radius: 20px;
     font-weight: 500;
     padding: 5px 7px;
-    width: 70px;
+    width: auto;
     text-align: center;
     letter-spacing: 2px;
-    
+
 }
 
-.depois{
-   font-size: 10px;
-    position:absolute;
+.depois {
+    font-size: 8px;
+    position: absolute;
     right: 5px;
     top: 5px;
-    background-color:#ff0303f9;
+    background-color: #ff030368;
     border: 0.3px solid rgba(255, 255, 255, 0.398);
     border-radius: 20px;
-    font-weight: 500;
+    font-weight: bold;
     padding: 5px 7px;
     width: 70px;
     text-align: center;
@@ -329,24 +383,62 @@ br{
     letter-spacing: 2px;
 }
 
-.card-container img{
-    width: 100%;
-    height: 200px;
+.carrossel {
+    position: relative;
 }
 
-.transformacoes-cards, .planos-card{
+.ProximoSlide,
+.SlideAnterior {
+    position: absolute;
+    top: 45%;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.ProximoSlide {
+    right: 5px;
+}
+
+.SlideAnterior {
+    left: 5px;
+}
+
+.ProximoSlide:hover{
+    color: #ff0303;
+    transform: translateX(3px)
+}
+
+.SlideAnterior:hover{
+    color: #ff0303;
+    transform: translateX(-3px)
+}
+
+.card-container img {
+    width: 100%;
+    height: 200px;
+
+}
+
+
+.transformacoes-cards,
+.planos-card {
     display: flex;
     gap: 50px;
     align-items: stretch;
 }
 
 
-.transformacoes-intro div, .planos-intro div{
+.transformacoes-intro div,
+.planos-intro div {
     width: 50%;
-    
+
 }
 
-.resultados, .planos-descricao{
+.resultados {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -354,51 +446,64 @@ br{
     padding: 0px 20px;
 }
 
-.resultados p{
-    font-size: 14px;
-    
+
+.planos-descricao{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 20px;
+    gap: 20px;
 }
 
-.resultados div, .planos-descricao div{
+
+
+.resultados p {
+    font-size: 14px;
+
+}
+
+.resultados div,
+.planos-descricao div {
     display: flex;
     flex-direction: column;
     padding: 10px 0px;
 }
 
-.resultados h2, .planos-descricao h2{
+.resultados h2,
+.planos-descricao h2 {
     font-size: 30px;
-    font-family:'Anton', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: 100;
 }
 
-.resultados h3{
+.resultados h3 {
     font-size: 10px;
     color: rgba(255, 255, 255, 0.528);
 }
 
-.resultados span{
+.resultados span {
     font-size: 10px;
 }
 
-.resultados-obtidos{
+.resultados-obtidos {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
     gap: 30px;
-    border-top: 0.3px solid rgba(255, 255, 255, 0.126); 
-    border-bottom: 0.3px solid rgba(255, 255, 255, 0.126); 
+    border-top: 0.3px solid rgba(255, 255, 255, 0.126);
+    border-bottom: 0.3px solid rgba(255, 255, 255, 0.126);
 }
 
-.resultados-obtidos span{
+.resultados-obtidos span {
     font-size: 25px;
 }
 
-.resultados-obtidos p{
+.resultados-obtidos p {
     font-size: 10px;
 }
 
-#planos{
+#planos {
     display: flex;
     flex-direction: column;
     background-color: rgb(9, 9, 9);
@@ -408,14 +513,14 @@ br{
     gap: 20px;
 }
 
-.planos-descricao button{
+.planos-descricao button {
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-around;
     color: white;
     padding: 10px;
-    background-color:  rgba(100, 100, 100, 0.167);
+    background-color: rgba(100, 100, 100, 0.167);
     border: none;
     border-radius: 30px;
     width: 70%;
@@ -425,20 +530,20 @@ br{
     cursor: pointer;
 }
 
-.planos-descricao button:hover{
+.planos-descricao button:hover {
     background-color: rgba(240, 248, 255, 0.485);
     transform: translateY(-4px);
     color: black;
     font-weight: bold;
 }
 
-.planos-descricao button:hover .ph{
-    
+.planos-descricao button:hover .ph {
+
     color: black;
     font-weight: bold;
 }
 
-.planos-descricao .ph{
+.planos-descricao .ph {
     color: rgb(255, 0, 0);
     font-size: 18px;
     font-weight: 500;
@@ -446,20 +551,22 @@ br{
     transition: all ease-in-out 0.4s;
 }
 
-.plano{
+.plano {
     border: 0.2px solid rgba(255, 255, 255, 0.192);
     transition: all ease-in-out 0.5s;
+    display: flex;
+    flex-direction: column;
 }
 
-.plano:hover{
-    border: 0.2px solid rgba(255, 0, 0, 0.547); 
+.plano:hover {
+    border: 0.2px solid rgba(255, 0, 0, 0.547);
     background-color: rgba(255, 0, 0, 0.097);
     transform: scale(1.05);
 }
 
-.presencial{
+.presencial {
     font-size: 10px;
-    position:absolute;
+    position: absolute;
     left: 7px;
     bottom: 7px;
     background-color: rgba(255, 2, 2, 0.678);
@@ -472,51 +579,52 @@ br{
     letter-spacing: 2px;
 }
 
-.imagem-plano{
+.imagem-plano {
     position: relative;
 }
 
-.planos-descricao p{
+.planos-descricao p {
     font-size: 14px;
 }
 
-.planos-descricao li{
+.planos-descricao li {
     font-weight: 600;
     font-size: 12px;
     list-style: none;
-    
+
 }
 
 .botoes-planos{
+    margin-top: auto;
     display: flex;
     align-items: center;
 }
 
-.botoes-planos .ph-arrow-up-right{
+.botoes-planos .ph-arrow-up-right {
     color: white;
 }
 
-#faq{
-    background-color: rgb(18,18,18);
+#faq {
+    background-color: rgb(18, 18, 18);
     color: white;
     padding: 45px 70px;
 }
 
-.faq-intro{
+.faq-intro {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.faq-intro span{
+.faq-intro span {
     color: #ff0303f9;
 }
 
-.faq-intro h1{
+.faq-intro h1 {
     font-size: 55px;
     font-family: 'Anton', sans-serif;
 }
 
-.faq-container{
+.faq-container {
     max-width: 900px;
     margin: auto;
     display: flex;
@@ -524,19 +632,19 @@ br{
     gap: 15px;
 }
 
-.faq-container details{
-    background-color: rgb(25,25,25);
-    border: 1px solid rgba(255,255,255,0.08);
+.faq-container details {
+    background-color: rgb(25, 25, 25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     overflow: hidden;
     transition: .3s;
 }
 
-.faq-container details:hover{
-    border-color: rgba(255,0,0,0.4);
+.faq-container details:hover {
+    border-color: rgba(255, 0, 0, 0.4);
 }
 
-.faq-container summary{
+.faq-container summary {
     padding: 20px;
     cursor: pointer;
     list-style: none;
@@ -544,11 +652,11 @@ br{
     position: relative;
 }
 
-.faq-container summary::-webkit-details-marker{
+.faq-container summary::-webkit-details-marker {
     display: none;
 }
 
-.faq-container summary::after{
+.faq-container summary::after {
     content: "+";
     position: absolute;
     right: 20px;
@@ -557,13 +665,13 @@ br{
     transition: .3s;
 }
 
-.faq-container details[open] summary::after{
+.faq-container details[open] summary::after {
     transform: rotate(45deg);
 }
 
-.faq-container p{
+.faq-container p {
     padding: 0 20px 20px;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
 }
 
@@ -573,114 +681,171 @@ br{
 
 
 
-@media (max-width: 768px){
-    header{
-    flex-direction: column;
-    gap:15px;
-    padding:15px;
-}
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        gap: 15px;
+        padding: 15px;
+    }
 
-nav{
-    flex-wrap:wrap;
-    justify-content:center;
-}
+    nav {
+        display: none;
+    }
 
-header button{
-    width:100%;
-    justify-content:center;
-}
+    header button {
+        width: 100%;
+        justify-content: center;
+    }
 
-#inicio h2{
-    font-size:40px;
-}
+    #menu-desktop,
+    #agendar-desktop {
+        display: none;
+    }
 
-#inicio div{
-    margin-left:20px;
-    margin-right:20px;
-}
+    #menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        width: auto;
+    }
 
-.servicos-intro{
-    flex-direction:column;
-    gap:20px;
-}
+    #menu-mobile {
+        display: none;
 
-.servicos-intro div{
-    width:100%;
-}
+        position: absolute;
+        top: 100%;
+        right: 0;
 
-.servicos-descricao{
-    flex-direction:column;
-}
+        width: 250px;
 
-.servicos-descricao div{
-    width:100%;
-}
+        background-color: #121212;
+        border-radius: 12px;
 
-#Sobre{
-    flex-direction: column;
-}
+        padding: 20px;
 
-#Sobre img{
-    width: 100%;
-    max-width: 400px;
-}
+        flex-direction: column;
+        gap: 20px;
 
-.metodologia{
-    flex-direction: column;
-}
+        z-index: 1000;
+    }
 
-.transformacoes-intro{
-    flex-direction: column;
-    gap: 20px;
-}
+    #menu-mobile.ativo {
+        display: flex;
+    }
 
-.transformacoes-intro div{
-    width: 100%;
-}
+    #menu-mobile nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-.transformacoes-cards{
-    flex-direction: column;
-    gap: 20px;
-}
+    #menu-mobile nav a {
+        text-decoration: none;
+        color: white;
+    }
 
-.transformacoes-cards .card-container{
-    width: 100%;
-}
+    #agendar-mobile {
+        width: 100%;
+    }
 
-.planos-intro{
-    flex-direction: column;
-}
+    #inicio h2 {
+        font-size: 40px;
+    }
 
-.planos-intro div{
-    width: 100%;
-}
+    #inicio div {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
-.planos-card{
-    flex-direction: column;
-    gap: 20px;
-}
 
-.planos-card .card-container{
-    width: 100%;
-}
 
-#servicos, #transformacoes, #planos{
-    padding: 40px 20px;
-}
+    .servicos-intro {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-.sobre-info{
-    padding: 30px 20px;
-}
+    .servicos-intro div {
+        width: 100%;
+    }
 
-#faq{
-    padding: 40px 20px;
-}
+    .servicos-descricao {
+        flex-direction: column;
+    }
 
-.faq-intro h1{
-    font-size: 36px;
-}
+    .servicos-descricao div {
+        width: 100%;
+    }
 
-.faq-container summary{
-    font-size: 14px;
-}
+    #Sobre {
+        flex-direction: column;
+    }
+
+    #Sobre img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .metodologia {
+        flex-direction: column;
+    }
+
+    .transformacoes-intro {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .transformacoes-intro div {
+        width: 100%;
+    }
+
+    .transformacoes-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .transformacoes-cards .card-container {
+        width: 100%;
+    }
+
+    .planos-intro {
+        flex-direction: column;
+    }
+
+    .planos-intro div {
+        width: 100%;
+    }
+
+    .planos-card {
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+
+    .planos-card .card-container {
+        width: 100%;
+    }
+
+    #servicos,
+    #transformacoes,
+    #planos {
+        padding: 40px 20px;
+    }
+
+    .sobre-info {
+        padding: 30px 20px;
+    }
+
+    #faq {
+        padding: 40px 20px;
+    }
+
+    .faq-intro h1 {
+        font-size: 36px;
+    }
+
+    .faq-container summary {
+        font-size: 14px;
+    }
 }
